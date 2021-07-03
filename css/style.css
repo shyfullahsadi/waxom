@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Raleway:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
     margin: 0;
@@ -96,12 +97,14 @@ h6 {
     font-family: 'Raleway', sans-serif;
     font-size: 36px;
     font-weight: 500;
+    padding-bottom: 4px;
 }
 
 #banner .banner-content h1 {
     font-family: 'Raleway', sans-serif;
     font-size: 52px;
     font-weight: 900;
+    padding-bottom: 21px;
 }
 
 #banner .banner-content p {
@@ -110,7 +113,7 @@ h6 {
     line-height: 24px;
     font-weight: 300;
     padding: 0 300px;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 #banner .banner-content a {
@@ -146,6 +149,7 @@ h6 {
     color: #555555;
     font-weight: 650;
     transition: all linear 0.4s;
+    padding-bottom: 13px;
 }
 
 #service .item p {
@@ -195,6 +199,7 @@ h6 {
     font-weight: 600;
     font-size: 30px;
     color: #555555;
+    padding-bottom: 17px;
 }
 
 #idea .content p {
@@ -204,6 +209,7 @@ h6 {
     font-weight: 300;
     color: #8c8c8c;
     padding: 0 100px;
+    padding-bottom: 20px;
 }
 
 /* ================================================================
@@ -271,7 +277,7 @@ h6 {
     font-weight: 600;
     font-size: 30px;
     color: #555555;
-    padding-bottom: 6px;
+    padding-bottom: 21px;
 }
 
 #project .head p {
@@ -560,7 +566,279 @@ h6 {
                    Recent Post Part css
  ================================================================ */
 
+#recentPost {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+#recentPost .head h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    color: #555555;
+    padding-bottom: 18px;
+}
+
+#recentPost .head p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    color: #8c8c8c;
+    padding: 0 260px;
+    padding-bottom: 24px;
+}
 
 #recentPost .gallery {
     border: 1px solid #f8f8f8;
+    cursor: pointer;
 }
+
+#recentPost .gallery .postImage {
+    position: relative;
+}
+
+#recentPost .gallery .overlay {
+    position: absolute;
+    width: 50px;
+    height: 60px;
+    top: 20px;
+    left: 20px;
+    text-align: center;
+    z-index: 999;
+}
+
+#recentPost .gallery .postImage::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 17, 17, 0.7);
+    opacity: 0;
+    transition: all linear 0.3s;
+}
+
+#recentPost .gallery .overlay h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    background: #363636;
+    color: #ffffff;
+    line-height: 35px;
+    transition: all linear 0.3s;
+}
+
+#recentPost .gallery .overlay h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    background: #252525;
+    color: #ffffff;
+    line-height: 25px;
+    transition: all linear 0.3s;
+}
+
+#recentPost .gallery .content {
+    padding: 30px;
+    transition: all linear 0.3s;
+}
+
+#recentPost .gallery .content h2 {
+    font-family: 'Raleway', sans-serif;
+    color: #555555;
+    font-weight: 500;
+    font-size: 20px;
+    transition: all linear 0.3s;
+}
+
+#recentPost .gallery .content p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: #8c8c8c;
+    font-size: 14px;
+    transition: all linear 0.3s;
+}
+
+#recentPost .gallery .content a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #c7b299;
+}
+
+#recentPost .gallery .content i {
+    font-size: 10px;
+}
+
+#recentPost .gallery:hover .content {
+    background: #362f2d;
+}
+
+#recentPost .gallery:hover .content h2 {
+    color: #c7b299;
+}
+
+#recentPost .gallery:hover .content p {
+    color: #ffffff;
+}
+
+#recentPost .gallery:hover .postImage::after {
+    opacity: 1;
+}
+
+#recentPost .gallery:hover .overlay h5 {
+    background: #c7b299;
+}
+
+#recentPost .gallery:hover .overlay h6 {
+    background: #a48d72;
+}
+
+/* ================================================================
+                   Sponsor Part css
+ ================================================================ */
+
+#sponsor {
+    background: url(../images/footer-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 140px;
+    padding-bottom: 140px;
+    position: relative;
+}
+
+#sponsor::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 17, 17, 0.7);
+}
+
+#sponsor .sponsorImage {
+    position: relative;
+    z-index: 999;
+}
+
+/* ================================================================
+                   Blog Part css
+ ================================================================ */
+
+#blog {
+    background: #191919;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+#blog .footerOne p {
+    color: #555555;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    padding-top: 27px;
+    line-height: 24px;
+}
+
+#blog .head h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    padding-bottom: 30px;
+}
+
+#blog .post h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: #363636;
+    font-size: 12px;
+    font-weight: 300;
+    padding-bottom: 10px;
+    transition: all linear 0.3s;
+}
+
+#blog .post {
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#blog .post:hover h6 {
+    color: #ffffff;
+}
+
+#blog .post p {
+    font-family: 'Montserrat', sans-serif;
+    color: #555555;
+    font-size: 14px;
+    font-weight: 300;
+    transition: all linear 0.3s;
+}
+
+#blog .post {
+    border-bottom: 1px solid #252525;
+}
+
+#blog .post:last-child {
+    border: none;
+}
+
+#blog .post:hover p {
+    color: #c7b299;
+}
+
+.highlight {
+    color: skyblue;
+}
+
+.highlight-link {
+    color: #959595;
+}
+
+/* ================================================================
+                   CopyRight Part css
+ ================================================================ */
+
+#copyRight {
+    background: #111111;
+    padding-top: 45px;
+    padding-bottom: 50px;
+}
+
+#copyRight ul li {
+    display: inline-block;
+}
+
+#copyRight ul li{
+    font-family: 'Montserrat', sans-serif;
+    color: #555555;
+    font-size: 13px;
+    font-weight: 300;
+    border-right: 1px solid #252525;
+    padding: 0 8px;
+}
+
+#copyRight ul li:last-child{
+    border: none;
+}
+
+#copyRight ul li a {
+    font-family: 'Montserrat', sans-serif;
+    color: #555555;
+    font-size: 13px;
+    font-weight: 300;
+    padding-left: 5px;
+    transition: all linear 0.4s;  
+}
+
+#copyRight ul li a:hover{
+    color: #c7b299;
+}
+
+#copyRight .right{
+    text-align: right;
+}
+
+/* css end */
